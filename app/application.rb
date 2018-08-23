@@ -10,10 +10,10 @@ class Application
     if req.path.match(/items/)
       item_title = req.path.split("/items/").last
 
-      item = @@items.find{|i| i.title == song_title}
+      item = @@items.find{|i| i.name == item_title}
 
       if item !=nil
-        resp.write "The #{item.title} is #{item.price}"
+        resp.write "The #{item.name} is #{item.price}"
       end
 
     else
