@@ -6,6 +6,8 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path.match(/testing/)
+    else
+      resp.write "Route not found"
     end
 
     resp.finish
