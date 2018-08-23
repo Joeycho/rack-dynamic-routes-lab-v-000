@@ -5,7 +5,7 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
     binding.pry
-    if req.path.match(/testing/)
+    if req.path.match(/items/)
       resp.write "Found testing"
     else
       resp.write "Route not found"
